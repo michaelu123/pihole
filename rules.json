@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"priority": 2,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"regexSubstitution": "\\1"
+			}
+		},
+		"condition": {
+			"regexFilter": "^https://www.googleadservices.com/.*adurl=https://ad.doubleclick.net/.*_clickid_%3F(.*)%3F.*",
+			"resourceTypes": [ "main_frame" ]
+		}
+	},
+	{
+		"id": 2,
+		"priority": 2,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"regexSubstitution": "\\1"
+			}
+		},
+		"condition": {
+			"regexFilter": "^https://www.googleadservices.com/.*adurl=https://clickserve.dartsearch.net/.*ds_dest_url%3D(.*)%3F.*",
+			"resourceTypes": [ "main_frame" ]
+		}
+	},
+	{
+		"id": 3,
+		"priority": 1,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"regexSubstitution": "\\1"
+			}
+		},
+		"condition": {
+			"regexFilter": "^https://www.googleadservices.com/.*adurl=(.*)%3F.*",
+			"resourceTypes": [ "main_frame" ]
+		}
+	},
+	{
+		"id": 4,
+		"priority": 1,
+		"action": {
+			"type": "redirect",
+			"redirect": {
+				"regexSubstitution": "\\1"
+			}
+		},
+		"condition": {
+			"regexFilter": "^https://www.googleadservices.com/.*adurl=(.*)",
+			"resourceTypes": [ "main_frame" ]
+		}
+	}
+]
